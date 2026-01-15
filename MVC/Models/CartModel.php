@@ -59,7 +59,7 @@ class CartModel
         $_SESSION['cart'] = [];
     }
 
-    public function getTotal(ProductModel $productModel): int
+    public function getTotal(ProductModel $productModel): ?int
     {
         $total = 0;
 
@@ -72,6 +72,8 @@ class CartModel
 
         return $total;
     }
+
+
 
     public function buy(): void
     {
